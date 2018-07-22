@@ -6,11 +6,14 @@ class ListItem extends Component {
         super(props);
     }
 
+    toggleCheckStatus = () => {
+        this.props.onCheckBoxClicked(this.props.id);
+    }
 
     render() {
         let resultElem = (
             <li id={this.props.id} className={this.props.checked ? 'checked' : ''}>
-                <input name="done-todo" type="checkbox" className="done-todo" checked={this.props.checked}/>
+                <input onClick={this.toggleCheckStatus} name="done-todo" type="checkbox" className="done-todo" checked={this.props.checked}/>
                 <span>{this.props.content}</span>
             </li>
         );

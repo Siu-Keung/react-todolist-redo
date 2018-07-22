@@ -44,10 +44,16 @@ class ListItemGroup extends Component{
         this.setState(this.state);
     }
 
+    onCheckBoxClicked = (id) => {
+        let targetItem = this.state.items.find(item => item.id === id);
+        targetItem.checked = !targetItem.checked;
+        this.setState(this.state);
+    }
+
 
     render(){
         let itemList = this.state.items.map(item =>
-            <ListItem id={item.id} content={item.content} checked={item.checked}/>);
+            <ListItem id={item.id} content={item.content} checked={item.checked} onCheckBoxClicked={this.onCheckBoxClicked}/>);
         return (
             <ol>
                 {itemList}
