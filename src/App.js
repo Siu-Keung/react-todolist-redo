@@ -4,6 +4,7 @@ import './App.css';
 import ListItemGroup from "./ListItemGroup";
 import './todo.css'
 import AddItemBar from "./AddItemBar";
+import FilterBar from "./FilterBar";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
 
             <AddItemBar/>
             <ListItemGroup/>
+            <FilterBar/>
 
         </div>
     );
