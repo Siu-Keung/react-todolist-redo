@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import ListItemGroup from "./ListItemGroup";
 import './todo.css'
+import AddItemBar from "./AddItemBar";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             </div>
             <br/>
 
+            <AddItemBar/>
             <ListItemGroup/>
 
         </div>
